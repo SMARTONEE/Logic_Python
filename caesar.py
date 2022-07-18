@@ -21,5 +21,28 @@ def caesar_cipher(string, x):
         i += 1
     print (phrase)
                 
-caesar_cipher("WHAT a strings, c'est coolos, je vais aller me peter une biere", 5)
 
+
+def Jean_Michel_Trader(arr):
+    benef_max = 0
+    i = 0
+    index_achat = 0
+    index_vente = 0
+    while i < len(arr):
+        y = i + 1
+        while y < len(arr):
+            if benef_max < arr[y] - arr[i]:
+                benef_max = arr[y] - arr[i] 
+                index_achat = i
+                index_vente = y
+            y += 1
+        i += 1      
+    print(benef_max)
+    print ([index_achat, index_vente])
+
+a = [-4, 20.7, -100, 9, 15, 8, 20, 1, 10]
+
+print(a[4]-a[2])
+print(len(a))
+
+Jean_Michel_Trader(a)
